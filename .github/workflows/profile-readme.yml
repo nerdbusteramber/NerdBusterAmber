@@ -1,0 +1,18 @@
+name: Profile README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run GitHub Profile README Action
+        uses: actions/github-profile-readme@v1
+        with:
+          README: README.md
